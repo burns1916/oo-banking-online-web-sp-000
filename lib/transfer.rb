@@ -4,11 +4,11 @@ class Transfer
   attr_accessor :transfer, :status, :balance, :sender, :receiver
   attr_reader  :amount
 
-  def initialize(sender, receiver, amount, status = "pending")
+  def initialize(sender, receiver, amount, status)
     @sender = sender
     @receiver = receiver
     @amount = amount
-    @status = status
+    @status = "pending"
   end
 
   def valid?
