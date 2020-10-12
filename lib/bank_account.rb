@@ -11,15 +11,15 @@ attr_accessor :balance, :status
   end
 
   def deposit(value)
-    self.balance += value
+    @balance += value
   end
 
   def display_balance
-    "Your balance is $#{self.balance}."
+    "Your balance is $#{@balance}."
   end
 
   def valid?
-    if self.balance > 0 && self.status != "closed"
+    if @balance > 0 && @status != "closed"
       true
     else
       false
@@ -27,6 +27,6 @@ attr_accessor :balance, :status
   end
 
   def close_account
-    self.status = "closed"
+    @status = "closed"
   end
 end
