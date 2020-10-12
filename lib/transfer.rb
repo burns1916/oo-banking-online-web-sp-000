@@ -20,6 +20,11 @@ class Transfer
   end
 
   def execute_transaction
+    if sender.balance < amount
+      self.status = "rejected"
+    elsif self.status = "complete"
+      "transaction was already completed"
+    else
     sender.balance -=amount
     receiver.balance +=amount
     self.status = "complete"
