@@ -23,7 +23,7 @@ class Transfer
       @sender.balance -= @amount
       @receiver.balance += @amount
       return @status = "complete"
-    elsif @sender.balance < @amount || @sender.closed_account
+    elsif @sender.balance < @amount || @sender.close_account
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
