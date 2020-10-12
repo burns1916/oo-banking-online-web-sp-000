@@ -19,7 +19,7 @@ attr_accessor :balance, :status
   end
 
   def valid?
-    if @balance > 0 && @status != "closed"
+    if @balance > 0 && @status == "open"
       true
     else
       false
