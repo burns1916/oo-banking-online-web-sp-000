@@ -1,8 +1,7 @@
 class Transfer
   # your code here
 
-  attr_accessor :transfer, :status, :balance, :sender, :receiver
-  attr_reader  :amount
+  attr_accessor :transfer, :status, :balance, :sender, :receiver, :amount
 
   def initialize(sender, receiver, amount)
     @sender = sender
@@ -24,7 +23,7 @@ class Transfer
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
-      return @status
+      @status
      else
        @status = "rejected"
        return "Transaction rejected. Please check your account balance."
